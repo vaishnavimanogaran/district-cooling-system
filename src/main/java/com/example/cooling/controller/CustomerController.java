@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.cooling.entity.Customer;
 import com.example.cooling.service.CustomerService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/customers")
@@ -15,7 +16,7 @@ public class CustomerController {
     private CustomerService service;
 
     @PostMapping
-    public Customer addCustomer(@RequestBody Customer customer) {
+    public Customer addCustomer(@Valid @RequestBody Customer customer) {
         return service.saveCustomer(customer);
     }
 

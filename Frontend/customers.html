@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>District Cooling System</h2>
+</header>
+
+<nav class="top-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="customers.html">Customers</a>
+    <a href="plants.html">Plants</a>
+    <a href="vendors.html">Vendors</a>
+    <a href="invoices.html">Invoices</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Add Customer</h2>
+
+        <input type="text" id="towerName" placeholder="Tower Name">
+
+        <input type="text" id="contactPerson" placeholder="Contact Person">
+
+        <input type="email" id="email" placeholder="Email">
+
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <input type="text" id="address" placeholder="Address">
+
+        <button onclick="saveCustomer()">Save Customer</button>
+    </div>
+
+    <div class="card">
+        <h2>Customer List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tower</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+
+            <tbody id="customerTable"></tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script src="js/customer.js"></script>
+
+</body>
+</html>

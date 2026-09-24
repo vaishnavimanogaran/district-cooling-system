@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>District Cooling System</h2>
+</header>
+
+<nav class="top-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="customers.html">Customers</a>
+    <a href="plants.html">Plants</a>
+    <a href="vendors.html">Vendors</a>
+    <a href="invoices.html">Invoices</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>System Summary Report</h2>
+        <p>Live data from Spring Boot backend</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <h1 id="customers">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Plants</h3>
+            <h1 id="plants">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Vendors</h3>
+            <h1 id="vendors">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Revenue</h3>
+            <h1 id="revenue">₹0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Expense</h3>
+            <h1 id="expense">₹0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Net Profit</h3>
+            <h1 id="profit">₹0</h1>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <button onclick="loadReport()">Refresh Report</button>
+    </div>
+
+</div>
+
+<script src="js/report.js"></script>
+
+</body>
+</html>

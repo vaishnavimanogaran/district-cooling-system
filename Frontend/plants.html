@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chiller Plant Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>District Cooling System</h2>
+</header>
+
+<nav class="top-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="customers.html">Customers</a>
+    <a href="plants.html">Plants</a>
+    <a href="vendors.html">Vendors</a>
+    <a href="invoices.html">Invoices</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Add Chiller Plant</h2>
+
+        <input type="text" id="plantName" placeholder="Plant Name">
+
+        <input type="text" id="location" placeholder="Location">
+
+    
+<input type="number" id="iceStorageCapacity" placeholder="Ice Storage Capacity (TR)">
+
+        <select id="status">
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+
+        <button onclick="savePlant()">Save Plant</button>
+    </div>
+
+    <div class="card">
+        <h2>Plant List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Plant Name</th>
+                    <th>Location</th>
+                    <th>Capacity</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="plantTable"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/plant.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>District Cooling System</h2>
+</header>
+
+<nav class="top-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="customers.html">Customers</a>
+    <a href="plants.html">Plants</a>
+    <a href="vendors.html">Vendors</a>
+    <a href="invoices.html">Invoices</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+</nav>
+
+<div class="container">
+
+    <!-- Generate Invoice -->
+    <div class="card">
+        <h2>Generate Invoice</h2>
+
+        <label>Select Customer</label>
+        <select id="customer">
+            <option value="">Loading customers...</option>
+        </select>
+
+        <button onclick="saveInvoice()">Generate Invoice</button>
+    </div>
+
+    <!-- Invoice List -->
+    <div class="card">
+        <h2>Generated Invoices</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Invoice ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Ton Hours</th>
+                    <th>Rate / Ton</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+
+            <tbody id="invoiceTable">
+                <!-- Data comes from invoice.js -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/invoice.js"></script>
+
+</body>
+</html>
